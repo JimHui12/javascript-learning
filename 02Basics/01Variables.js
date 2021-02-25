@@ -1,4 +1,4 @@
-var fullName = "Jim HUI";
+var fullName = "Someone";
 
 // how to name variables
 // fullName
