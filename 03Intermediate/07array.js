@@ -12,7 +12,7 @@ console.log(states.length);
 states[0] = "Hubei";
 console.log(states);
 
-var user = ["HUI", "HUI@gmail.com", 3, 34, true];
+var user = ["HI", "HI@gmail.com", 3, 34, true];
 console.log(user);
 
 user.pop(); //delete last element
@@ -23,4 +23,4 @@ user.shift();
 //console.log(user);
 console.log(user.indexOf("newyy"));
 
-console.log(Array.from("HUI"));
+console.log(Array.from("HI"));
