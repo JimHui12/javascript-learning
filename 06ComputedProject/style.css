@@ -1,21 +1,31 @@
  
 
 .red {
-    color: red;
+    background-color: red;
+    height: 10px;
 }
 
 .cyan {
-    color: cyan;
+    background-color: cyan;
+    height: 10px;
 }
 
 .violet {
-    color: violet;
+    background-color: violet;
+    height: 10px;
 }
 
 .orange {
-    color: orange;
+    background-color: orange;
+    height: 10px;
 }
 
 .pink {
-    color: pink;
+    background-color: pink;
+    height: 10px;
+}
+
+.center {
+    height: 40px;
+    width: 40px;
 }
