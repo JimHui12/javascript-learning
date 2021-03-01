@@ -2,7 +2,15 @@
 //     console.log(i);
 // }
 
-const myState = ["Taiwan", "Guangdong", 2021, "Shandong", "Guangxi", "Fujian", "Hunan"];
+const myStates = [
+  "Taiwan",
+  "Guangdong",
+  2021,
+  "Shandong",
+  "Guangxi",
+  "Fujian",
+  "Hunan",
+];
 
 // for (let i = 0; i < myState.length; i++) {
 //     if(typeof myState[i] !== 'string') break;
@@ -10,12 +18,15 @@ const myState = ["Taiwan", "Guangdong", 2021, "Shandong", "Guangxi", "Fujian", "
 //     console.log(myState[i]);
 // }
 
-let i = 20;
+// let i = 20;
 
-do {
-    console.log([i]);
-    i++;
-} while(i < 10); 
+// do {
+//     console.log([i]);
+//     i++;
+// } while(i < 10);
 
-
-
+let i = 0;
+while (i < myStates.length) {
+  console.log(myStates[i]);
+  i++;
+}
