@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            将其他的数据类型转换为Number
+            1.
+                使用 Number() 方法
+                - string -> number
+                    1. 如果时纯数字的string, 则直接将其转换为数字
+                    2. 如果舒服从中有非数字的内容，则转换为NaN
+                    3. 如果字符串是一个空串或者时一个全空格的字符串，则转换为0
+                - boolean -> number
+                    true  转成 1
+                    false 转成 0
+                - Null -> number = 0
+                - undefined -> 数字NaN
+            
+            2. 
+                专门用于string
+                parseInt() 把一个string   转换一个Int
+                parseFloat() 把一个string 转换成为一个float
+
+        */
+        var a = "123";
+
+        //调用Number()将a转换为Number类型
+        a = Number(a);
+        
+        a = false;
+        a = Number(a);
+        
+        a = null;
+        a = Number(a);
+
+        a = undefined;
+        a = Number(a);
+
+        /*
+            parseInt()可以将一个string中的有效的整数内容取出来，
+            转换为Number
+        */
+        a = "123px";
+        a = parseInt(a);
+        a = "123.456.45";
+        /*
+            parseFloat()作用和parseInt()类型，不同的时它可以获得有效的小数
+        */
+        a = parseFloat(a);
+
+        console.log(typeof a);
+        console.log(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
