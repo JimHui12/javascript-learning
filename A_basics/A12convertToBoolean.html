@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        将其他的数据类型转换为Boolean
+        - 使用Boolean()方法
+            数字    -> boolean
+                除了0和NaN,其余的都是true
+            字符串  -> boolean
+                除了空串，其余的都是true
+            null和undefined都会转换为false
+            object 也会转换为true
+
+        */
+
+        //调用Boolean()方法来将a转换为Boolean
+        var a = 123;
+        a = 0;
+        a = "";
+        a = Boolean(a);
+        
+        a = null;
+        a = Boolean(a);
+
+        a = undefined;
+        a = Boolean(a);
+
+        console.log(typeof a);
+        console.log(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
