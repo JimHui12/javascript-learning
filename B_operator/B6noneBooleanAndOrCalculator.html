@@ -10,9 +10,14 @@
             && || 非 boolean的情况
                 对于非boolean进行 || 运算时
                 先转换为boolean, 再运算，返回原值
+           
             && 运算:
                 如果第一个值为true, 则必然返回第二个值
                 如果第一个值为false, 则直接返回第一个值
+
+            || 运算
+                如果第一个值为true, 则直接返回第一个值
+                如果第一个值为false, 则直接返回第二个值
 
         */
         // true && true
@@ -27,6 +32,21 @@
 
         //false && false
         result = NaN && 0;
+        result = 0 && NaN;
+        
+
+        //true || true
+        //如果第一个值为true,则返回第一个值
+        result = 2 || 1;
+        result = 2 || NaN;
+        result = 2 || 0;
+
+        // 如果第一个值为false, 在直接返回第二个值
+        result = NaN || 1;
+
+        result = "" || "hello";
+
+        result = -1 || "你好";
 
         console.log("result ="+ result);
     </script>
