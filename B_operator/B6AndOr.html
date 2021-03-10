@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            && || 非 boolean的情况
+                对于非boolean进行 || 运算时
+                先转换为boolean, 再运算，返回原值
+            && 运算:
+                如果第一个值为true, 则必然返回第二个值
+                如果第一个值为false, 则直接返回第一个值
+
+        */
+        // true && true
+        //与运算，如果两个值都为true,则返回后面的
+        var result = 5 && 6;
+
+        //&& 运算，如果两个值中有false, 这返回考前的false
+        //false && true
+        result = 0 && 2;
+
+        result = 2 && 0;
+
+        //false && false
+        result = NaN && 0;
+
+        console.log("result ="+ result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

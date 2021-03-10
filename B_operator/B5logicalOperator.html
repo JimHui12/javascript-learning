@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Js中提供3中逻辑运算符
+            !   非 
+                用来对一个进行否定运算
+                所谓！就是值对一个boolean进行取反操作
+                true变false, false变true
+                如果对一个值进行两次取反，它不会变化
+                如果对!boolean进行运算，会转换为Boolean, 然后再取反
+                利用该特点，将一个其他的数据类型转换为boolean,
+                可以为一个任意数据类型取两次反，将其转换为boolean
+                原理和boolan()函数一样
+
+            &&  与
+                可以对负号两侧的值进行与运算并返回结果
+                运算规则
+                    两个值中只要有一个值为false就返回false
+                    只有两个值为true时，才会返回true
+                    && 属于短路的与，如果第一个值为false,则直接判断为false
+            
+            ||  或
+                可以对符号两侧的值进行或运算并返回结果
+                运算规则：
+                    两个值中只要有一个true, 就返回true
+                    如果两个值都会false，才返回false
+                    || 短路的或，如果第一个值为true, 则不会检查第二个
+
+        */
+
+        //如果两个值都是true,则返回true
+
+        // var result = true && true;
+        // var result = true && false;
+
+        // result = true && false;
+        // result = false && true;
+        // result = false && false;
+
+        result = false || false;
+
+        //只有一个true, 就返回true
+        result = true || false;
+        result = false || true;
+        result = true || true;
+
+        console.log("result = " + result);
+
+        //第一个值为false,则检查第二个值
+        //false || alert("123");
+
+        //第一个值为true, 则不再检查第二个值
+        //true || alert("123");
+
+        // var a = true;
+
+        // //对a进行！运算
+        // var b = 10;
+        // b = !!b;
+
+        // // console.log("a = " +a);
+        // console.log("b = " +b);
+        // console.log(typeof b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
