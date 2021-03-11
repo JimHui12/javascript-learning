@@ -23,7 +23,10 @@
         var score = prompt("请输入小明成绩(0-100): ");
         
         //根据score的值来决定给小明什么决定
-        if(score == 100) {
+        if(score > 100 || score < 0 || isNaN(score)) {
+            alert("拉出去");
+        } else {
+            if(score == 100) {
             alert("宝马，拿去");
         }else if(score >= 80){
             alert("手机，拿去");
@@ -32,6 +35,9 @@
         }else {
             alert("棍子一根");
         }
+        }
+
+
 
 
     </script>
