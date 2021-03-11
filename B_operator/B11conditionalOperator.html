@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        条机运算符也叫三元运算符
+        语法：
+            条机表达式 ? 语句1 : 语句2 ;
+        执行的流程：
+            条机运算符在执行时，首先对条机表达式进行求值
+                如果该值为true，则执行语句1，并返回执行结果
+                如果该值为false，则执行语句2，并返回执行结果
+            如果条件的表达式的求值结果是一个非boolean, 
+                会将其转换为boolean, 然后运算
+        */
+        //false ? alert("语句1"):alert("语句2");
+        var a = 300;
+        var b = 143;
+        var c = 50;
+        // a > b ? alert("a大"):alert("b大");
+        // var max = a > b ? a : b;
+
+        //获取a, b, c中的大值
+        // max = max > c ? max : c;
+
+        //这种写法不推荐使用，不方便阅读
+        var max = a > b ? (a > c ? a : c) : (b > c ? b : c); 
+        console.log('max = ' + max);
+
+        "hello" ? alert("语句1"):alert("语句2");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

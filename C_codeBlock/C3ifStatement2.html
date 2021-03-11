@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        if语句
+            语法二
+                if(条件表达式){
+                    语句。。。
+                }else {
+                    语句。。。
+                }
+            if ... else...语句
+                当语句执行时，先会对if后的条件表达式进行求值判断
+                    如果该值为true,则执行if后的语句
+                    如果该值为false,则执行else后的语句
+            语法三：
+                if(条件表达式){
+                    语句。。。
+                }else if (条件表达式){
+                    语句。。。
+                }else if (条件表达式){
+                    语句。。。
+                }else{
+                    语句。。。
+                }
+            
+            if...else if...else
+                当该语句执行时，会从上到下依次对条件表达式进行求值判断
+                如果值为true,则执行当前语句。
+                如果值为false,则继续向下判断。
+                如果所有的条件都不满足，则执行最后一个else的语句
+                该语句中，只会有一个代码块被执行，一旦代码块执行了，则直接结束语句
+        */
+       // if(age >= 60) {
+           //     alert("你已经退休了");
+           // }else {
+               //     alert("你还没退休");
+               // }
+        
+        var age = 200;
+        // if(age > 100) {
+        //     alert("活着挺没意思的");
+        // }else if(age> 80){
+        //     alert("你也老大不小了");
+        // }else if(age > 60){
+        //     alert("你也退休了");
+        // }else if(age > 30){
+        //     alert("你已经中年了");
+        // }else if(age > 17) {
+        //     alert("你已经成年了");
+        // }else {
+        //     alert("你还是个小孩子");
+        // }
+
+        age = 40;
+
+        if(age > 17 && age <= 30) {
+            alert("你已经成年了")
+        }else if (age > 30 && age <= 60) {
+            alert("你已经中年了");
+        }else if (age > 60 && age <= 80) {
+            alert("你已经退休了");
+        }else{
+            alert("你岁数挺大的了");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
