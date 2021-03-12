@@ -6,24 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        /*
-            if score ==100
-            else if 80 < score < 99
-            else if 60 < score < 80
-            else noe
-        */
-       /*
-       prompt()可以弹出一个提示框，该提示框中会带有一个文本框
-       用户可以在文本框中输入一段内容，该方法需要一个字符串作为参数
-       该字符串将会作为提示框的提示文字
+        //将prompt放入到一个循环中
+        while(true) {
+            //score就是小明的期末成绩
+            var score = prompt("请输入小明成绩(0-100): ");
 
-       用户输入的内容建辉作为方法的返回值返回，可以定义一个变量来接收该内容
-       */
-      //score 就是小明的期末成绩
-        var score = prompt("请输入小明成绩(0-100): ");
-        
+            //判断用户输入的值是否合法
+            if(score >= 0 && score <=100) {
+                break;
+            }
+
+            alert("请输入有效的分数！！！");
+        }
+
+               
         //根据score的值来决定给小明什么决定
-            if(score > 100 || score < 0 || isNaN(score)) {
+        if(score > 100 || score < 0 || isNaN(score)) {
                 alert("拉出去");
             } else {
                 if(score == 100) {
@@ -36,10 +34,6 @@
                 alert("棍子一根");
             }
         }
-
-
-
-
     </script>
 </head>
 <body>
