@@ -10,6 +10,23 @@
         编写程序，由键盘输入三个整数分别存入变量num1, num2, num3
         对他们进行排序，并且从小到大输出
         */
+
+
+        var height = prompt("请输入你的身高(CM):");
+        var money = prompt("请输入你的财富(万):");
+        var face = prompt("请输入你的身高(PX):");
+
+        // alert(height + "--" + money + "--" + face);
+        if(height > 180 && money > 1000 && face > 500) {
+            alert("我一定要嫁给他。");
+        }else if(height > 180 || money > 1000 || face > 500) {
+            //如果三个条件有为真的情况，则：“嫁吧，比上不足，比下有余."
+            alert("嫁吧，比上不足，比下有余。");
+        }else {
+            //如果三个条件都不满足，则不嫁
+            alert("不嫁.");
+        }
+
     </script>
 </head>
 <body>
