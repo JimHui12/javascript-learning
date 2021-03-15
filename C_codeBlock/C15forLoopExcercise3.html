@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        打印所有的三位数
+        */
+        for(var i=100; i<1000; i++){
+            //获取i的百位 十位个位的数字
+            //获取百位数字
+            var bai = parseInt( i/100);
+
+            //获取十位的数字
+            var shi = parseInt((i - bai*100)/10);
+
+            //获取各位数字
+            var ge = i % 10;
+
+            //
+            if(bai*bai*bai + shi*shi*shi + ge*ge*ge == i){
+                console.log(i);
+            }
+
+            //console.log(ge);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
