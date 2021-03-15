@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            通过程序，在页面输出如下图形
+            *
+            **
+            ***
+            ****
+            *****
+
+            *****
+            *****
+            *****
+            *****
+            *****
+        */
+
+        //向body中输出一个内容
+        // document.write("***** <br />");
+
+        //通过一个for循环来输出图形
+        //这个for循环执行几次，图形的高度就是多少
+        //它可以用来控制图形的高度
+        for (var i = 0; i < 5; i++) {
+
+            /*
+            在循环内部的内部再创建一个循环，用来控制图形的宽度
+            目前外部的for循环执行一次，内部就会执行5次
+
+            内层循环可以来决定图形的开度，执行几次图形的宽度就是多少
+            */
+            // for(var j=5; j<i+1;i++ ){
+            //     document.write("*&nbsp;&nbsp;&nbsp;");
+               
+            // }
+
+            for(var j=5; j>i;  j-- ){
+                document.write("*&nbsp;&nbsp;&nbsp;"); 
+            }
+
+            //输出一个换行
+            document.write("<br />");
+
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
