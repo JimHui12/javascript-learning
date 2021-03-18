@@ -38,8 +38,55 @@
         3.自定义对象
             由开发人员自己创建的对象
         
-            
+
         */
+
+        //创建对象
+        /*
+            使用new关键字调用的函数，是构造函数的constructor
+            构造函数是专门用来创建对象的函数
+            使用typeof 检查一个对象，会返回Object
+        */
+        var obj = new Object();
+       
+
+        //向对象中添加属性
+        /*
+        向对象中保存的值称为属性
+        向对象添加属性
+        语法，对象，属性名 = 属性值
+        */
+
+        //向obj中添加一个Name属性
+        obj.name = "孙";
+
+        //向obj中添加一个gender属性
+        obj.gender = "男";
+        
+        //向obj中添加一个age属性
+
+        /*
+        读取对象的属性
+        语法 对象.属性名
+
+        如果读取对象中没有的属性，不会报错而是会返回undefined
+        */
+        obj.age = 18
+        console.log(obj.name);
+
+        /*
+        修改对象的属性值
+        语法：对象.属性名 = 新值
+        */
+
+        obj.name = "Tom";
+
+        /*
+        删除对象的属性
+        语法：delete 对象属性名
+        */
+        delete obj.name;
+        console.log(obj.name);
     </script>
 </head>
 <body>
