@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        定义一个函数，判断一个数是否是偶数，如果是返回true, 否则返回false
+        */
+
+        function isEven(num) {
+            if(num%2 == 0) {
+                return num%2 == 0;
+            }else {
+                return false;
+            }
+        }
+
+        var result = isEven(3);
+
+        //console.log("result = " + result);
+
+        /*
+            定义一个函数，可以根据半径计算一个原的面积，并返回计算结果
+            3.4*r*r
+        */
+        
+        
+        function area(r){
+            return 3.14**r;
+        }
+
+        result = area(5);
+        console.log("result = " + result);
+
+        /*
+        创建一个函数，可以在控制台中输出一个人的信息
+        可以输出人的name age gender address
+        实参可以是任意的数据类型，也可以是一个对象
+        当参数过多时，可以将参数封装到一个对象中，然后通过对象传递
+        */
+        
+        function sayHello(o) {
+            console.log("o = " + o.name+" " + o.age + " " + o.gender + o.address);
+        }
+
+        //sayHello("孙悟空", 18, "男", "花果山");
+        //创建一个对象
+        var obj= {
+            name: "孙悟空",
+            age: 18,
+            gender: "男",
+            address: "花果山"
+        }
+
+        sayHello(obj);
+
+        /*
+        实参可以是一个对象，也可以是一个函数
+        */
+
+        function fun(a) {
+            a(obj);
+        }
+
+        //fun(sayHello);
+        //fun(function(){alert("hello")});
+
+        // fun(area);
+        /*
+        area()
+        - 调用函数
+        - 相当于使用的函数的返回值
+        
+        area
+        -   函数对象
+        -   相当于直接使用函数对象
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
