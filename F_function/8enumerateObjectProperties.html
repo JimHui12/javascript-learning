@@ -21,9 +21,13 @@
             for(var 变量 in 对象){
 
             }
+        
+        for ... in 语句 对象中有几个属性，循环体就会执行几次
+            每次执行时，会将对象中的一个属性的名值赋值给变量
         */
         for(var n in obj){
-            console.log("hello");
+            //console.log("属性名："+n);
+            console.log(obj[n]);
         }
 
 
