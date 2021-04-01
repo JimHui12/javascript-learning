@@ -39,13 +39,36 @@
             return obj;
         }
 
+        /*
+        创建狗的对象
+        */
+        function createDog(name, age){
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.sayHello = function(){
+                alert("汪汪");
+            }
+            return obj;
+        }
+
+
         var obj2 = createPerson("猪八戒", 28, "男");
         var obj3 = createPerson("白骨精", 18, "女");
         var obj4 = createPerson("蜘蛛精", 19, "女");
 
-        console.log(obj2);
-        console.log(obj3);
+        //创建一个狗的对象
+        var dog = createDog("旺财", 3);
+
+        console.log(dog);
         console.log(obj4);
+        
+        //dog.sayHello();
+
+
+        // console.log(obj2);
+        // console.log(obj3);
+        // console.log(obj4);
 
         //obj2.sayName();
 
