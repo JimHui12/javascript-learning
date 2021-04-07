@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个数组
+        //var arr = new Array();
+
+        //arr[0] =123;
+        //arr.hello = "abc";
+
+        //console.log(arr.hello);
+
+        //使用字面量来创建数组
+        //语法：[]
+        //var arr = [];
+
+        //console.log(typeof arr);
+
+        //使用字面量创建数组，可以在创建时就指定数组中的元素
+        var arr = [1,2,3,4,5,10];
+
+        //使用构造函数创建数组时，也可以同时添加元素，将要添加的元素作为构造函数的参数传递
+        //元素之间使用，隔开
+        var arr2 = new Array(10,20,30);
+        //console.log(arr2);
+
+        //创建一个数组中只有一个元素10
+        arr = [10];
+        console.log(arr);
+
+        //创建一个长度为10的数组
+        arr2 = new Array(10);
+
+        //console.log(arr2.length);
+        //数组中的元素可以时任意的数据类型
+        arr = ["hello", 1, true, null, undefined];
+
+        //也可以是对象
+        var obj = {name:"孙悟空"};
+        arr[arr.length] = obj;
+        arr = [{name: "孙悟空"}, {name: "沙和尚"}, {name: "猪八戒"}];
+
+        //也可以时一个函数
+        arr = [function(){alert(1)},function(){alert(2)}]
+
+        //arr[0]();
+        //console.log(arr[1].name);
+
+        //数组中也可以放数组,如下这种数组称为二位数组
+        arr = [[1,2,3],[3,4,5],[5,6,7]];
+        console.log(arr[1]);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
