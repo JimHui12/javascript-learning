@@ -41,16 +41,28 @@
             var newArr = [];
 
             //遍历arr, 获取arr中Person对象
+            for(var i=0; i<arr.length; i++) {
+                console.log(arr[i]);
+                //判断Person对象的age是否大于等于18
+                if(p.age >= 18) {
+                    newArr.push(p);
+                }
+
+                //将对象放入到新数组中
+                newArr.push(p);
+            }
 
             //判断Person对象的age是否大于等于18
 
             //如果大于等于18, 则将这个对象添加到newArr中
 
-            
+            //将新的数据返回
             return newArr;
 
 
         }
+
+        var result = getAdult(perArr);
 
         console.log(per);
 
