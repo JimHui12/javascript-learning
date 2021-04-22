@@ -80,12 +80,58 @@
         str = "abcdefghijk";
 
         result = str.slice(1,4);
-        result = str.slice(1);
+        result = str.slice(1, -1);
 
+        /*
+        substring()
+        - 可以用来截取一个字符串，可以slice()类似
+        - 参数，
+            - 第一个，开始截取位置的索引(包括开始位置)
+            - 第二个，结束位置的索引(不包括结束位置)
+            - 不同的是这个方法不能接受负值作为参数，
+                如果传递一个负值，则默认使用0
+            - 而且它会自动调整参数的位置，如果第二个参数小于第一个，则自动交换
+        */
+        
+        result = str.substring(1, 0);
+
+        /*
+        substr()
+        用来截取字符串
+        参数
+            1.截取开始位置的索引
+            2.截取的长度
+        */
+        str = "abcdefg";
+        result = str.substr(3,2);
+
+        /*
+        split()
+        - 可以将一个字符串拆分一个数组
+        - 参数，
+            - 需要一个字符串作为参数，将会根据字符串去拆分数据
+        */
+        str = "abc, bcd, efg, hij";
+
+        result = str.split(",");
+
+        //console.log(Array.isArray(result));
+        //console.log(result[0]);
+
+        str = "abcdefg";
+        /*
+        toUpperCase()
+        - 将一个字符串转换为大写评返回
+        */
+        result = str.toUpperCase();
+        str = "ABCDEFG";
+
+        /*
+        toLowerCase()
+        - 将一个字符串转换为小写并返回
+        */
+        result = str.toLowerCase();
         console.log(result);
-
-
-
 
     </script>
 </head>
