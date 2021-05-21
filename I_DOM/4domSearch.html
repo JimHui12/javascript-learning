@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        window.onload = function(){
+
+            // 为id为btn01的按钮绑定一个单击响应函数
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function(){
+               // 查找bj节点
+               var bj = document.getElementById("bj");
+
+               //打印bj
+               //innerHTML 通过这个属性可以获取到元素内部的html
+               alert(bj.innerHTML);
+            };
+
+            //为id为btn02的按钮绑定一个单击响应函数
+            var btn02 = document.getElementById("btn02");
+            btn02.onclick = function(){
+                //查找所有li节点
+                //getElementsByTagName()可以根据标签名来获取一组元素节点对象
+                //这个方法会给我们返回一个类数组对象，所有查询到的元素都会封装到对象中
+                //即使查询到的元素只有一个，也会封装到数组中返回
+                var lis = document.getElementsByTagName("li");
+
+                //打印lis
+                //
+                //alert(lis);
+
+                //变量lis
+                for(var i=0; i<lis.length; i++){
+                    alert(lis[i].innerHTML);
+                }
+            };
+            
+            //为id为btn03的按钮绑定一个单击响应函数
+            var btn03 = document.getElementById("btn03");
+            btn03.onclick = function(){
+                // 查找name=gender的所有节点
+                var inputs = document.getElementsByName("gender");
+
+                //alert(inputs.length);
+                for(var i=0; i<inputs.length; i++){
+                    /*
+                    innerHTML用于获取元素内部的HTML代码
+                    对于自结束标签，这个属性没有意义
+                    */
+                    /*
+                        如果需要读取元素节点属性
+                        直接使用元素，属性名
+                        例子，元素.id 元素.name 元素.value
+                        注意，class属性不能采用这种方式
+                            读取class属性时需要使用元素.className
+                    */
+
+                    alert(inputs[i].className);
+                }
+
+            };
+
+            // 查找city下所有li节点
+            
+
+            // 返回city的所有子节点
+
+            // 返回phone的第一个子节点
+
+            // 返回 bj的父节点
+
+            // 返回andriod的前一个兄弟节点
+
+            // 读取username的属性值
+            // 设置username的属性值
+            // 返回bj 的文本值
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="total">
+
+    </div>
+    
+</body>
+</html>
