@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            //获取box1
+            var box1 = document.getElementById("box1");
+            //获取btn01
+            var btn01 = document.getElementById("btn01");
+            //定义一个变量
+            var timer;
+
+            //点击按钮以后，使box1向右移动(left值增大)
+            btn01.onclick = function(){
+                //关闭上一个定时器
+                clearInterval(timer);
+                //开启一个定时器，用来执行动画效果
+                timer = setInterval(function(){
+                    //获取box1的原理的left值
+                    var oldValue = parsetInt(getStyle(box1, "left"));
+
+                    var newValue = oldValue + 1;
+
+                    //判断newValue是否大于800
+                    if(newValue > 800){
+                        newValue = 800;
+                    }
+
+                    //将新值设置给box1
+                    box1.style.left = newValue + "px";
+
+                    //当元素移动到800px时，使其停止执行动画
+                    if(newValue >= 800){
+                        //到达目标，则关闭定时器
+                        clearInterval(timer);
+                    }
+
+
+                },30);
+                //alert("hello");
+                box1.style.left = "200px";
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="btn01">点击按钮以后box1向右移动</button>
+    
+    <br /> <br />
+
+    <div id="box1"></div>
+    
+    <div style="width: 0; height: 1000px; border-left: 1px black solid; position: absolute; left: 800px; top: 0px;"></div>
+    
+</body>
+</html>
