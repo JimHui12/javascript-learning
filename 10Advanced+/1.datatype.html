@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.分类
+            基本(值)类型
+                String: 任意字符串
+                Number：任意的数字
+                boolean：true/false
+                undefined: undefined
+                null: null
+            对象(引用)类型
+                Object: 任意对象
+                Function: 一种特别的对象(可以执行)
+                Array: 一种特别的对象(数字下标 index，内部数据是有序的)
+
+        2.判断
+            typeof 
+                可以判断 undefined / 数值 number / 字符串 string / boolean
+                不能判断: null与 object； object与 array
+            instanceof 
+                某数据的实例 判断对象的具体类型
+            === 
+                可以判断 undefined, null
+     -->
+
+     <script>
+        //1. 基本
+        // typeof返回数据类型的字符串表单
+        var a;
+        console.log(a, typeof a, typeof a==='undefined', a===undefined); //undefined 'undefined' true true
+        console.log(undefined==="undefined"); //false
+        
+        a = 4
+        console.log(typeof a==='number');
+        a = 'guigu';
+        console.log(typeof a==='String');
+        a = true
+        console.log(typeof a==="boolean");
+        a = null;
+        console.log(typeof a, a===null) //'object';
+
+        console.log("----------------");
+        //2. 对象
+        var b1 = {
+            b2: [1, 'abc', console.log],
+            b3: function () {
+                console.log("3");
+                return function(){
+                    return "xfz";
+                }
+            }
+        }
+
+        console.log(b1 instanceof Object, b1 instanceof Array); // b1 是不是Object的 实例函数对象， true, false
+        console.log(b1.b2 instanceof Array, b1.b2 instanceof Object); //true true
+        console.log(b1.b3 instanceof Function, b1.b3 instanceof Object); // true true
+
+        console.log(typeof b1.b2, '------'); // object 
+
+        console.log(typeof b1.b3==='function') // true
+        
+        console.log(typeof b1.b2[2]==='function');
+        b1.b2[2](4);
+
+        console.log(b1.b3()());
+
+        // var obj = {
+        //     name: 'Tom',
+        //     age: 12
+        // };
+
+        // function test() {
+        //     var a = 3;
+        // }
+
+        // var arr = [3, 'abc'];
+        // arr[1];
+
+     </script>
+</body>
+</html>

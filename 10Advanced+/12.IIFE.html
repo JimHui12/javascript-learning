@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    <!-- 
+        理解
+            Immediately Invoked Function Expression
+        作用
+            隐藏实现
+            不会污染外部(一般是全局)命名空间
+            用它来编写js模块
+     -->
+    <script>
+        (function(){ //匿名函数自调用，局部空间
+            var a = 3
+            console.log(a+3);
+        })()
+        var a = 4
+        console.log(a);
+
+        (function(){
+            var a = 1;
+            function test() {
+                console.log(++a);
+            }
+            window.$ = function(){// 向往暴露一个全局函数
+                return {
+                    test: test
+                }
+            }
+        })()
+
+        $().test() //1. $是一个函数 2. $执行后，返回的是一个object
+    </script>
+</body>
+</html>
