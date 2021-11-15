@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+1.
+
+2.
+JavaScript 要用单线程，而不用的多线程模式?
+作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DDM。
+者决定了它只能是单线程，否则会带来很复杂的同步问题        
+
+
+代码的分类：
+    初始化代码
+    回调代码
+JS引擎执行代码的基本流程
+    先执行初始化代码：包含一些特别的代码
+        设置定时器
+        绑定监听
+        发生Ajax请求
+    后面在某个时刻才会执行回调代码
+     -->
+    
+    <script>
+        setTimeout(function(){
+            console.log('timeout 2222');
+            alert('+0-0-0-0-')
+        }, 2000)
+        setTimeout(function() {
+            console.log('timeout 1111');
+            alert('+++++++')
+        }, 1000)
+        setTimeout(function(){
+            console.log('timeout() 00000');
+        }, 0)
+        function fn() {
+            console.log('fn()');
+        }
+        fn()
+        console.log('alert()之前');
+        alert('------') //暂停当前主线程的执行，同时暂停计时，点击确定后，恢复程序执行和计时
+        console.log('alert()之后');
+    </script>
+</body>
+</html>

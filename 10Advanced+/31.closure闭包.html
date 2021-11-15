@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+
+    <script>
+        var btns = document.getElementsByTagName('button')
+
+        
+        // for(var i = 0, length=btns.length; i < length; i++){
+        //     var btn = btns[i]
+        //     btn.onclick = function () {
+        //         alert('第 '+(i+1)+' 个')
+        //     }
+        // }
+
+                
+        // for(var i = 0, length=btns.length; i < length; i++){
+        //     var btn = btns[i]
+        //     //将btn所对应的下标保存在btn上
+        //     btn.index = i
+        //     btn.onclick = function () {
+        //         alert('第 '+(this.index+1)+' 个')
+        //     }
+        // }
+
+        //利用闭包
+        for(var i = 0, length=btns.length; i < length; i++){
+            (function (i) {
+                var btn = btns[i]
+                btn.onclick = function () {
+                    alert('第'+(i+1)+'个')
+                }
+            })(i)
+        }
+
+        
+    </script>
+</body>
+</html>
